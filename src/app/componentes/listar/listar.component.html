@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="inicio">
+        <div class="inicio-contenido">
+          <table class="egt">
+            <thead>
+
+              <tr>
+                <td>Placa</td>
+                <td>Tipo Vehiculo</td>
+                <td>Cilindraje</td>
+                <td>Fecha Ingreso</td>
+                <td>Fecha Salida</td>
+                <td>Total</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of respuesta">
+                <td> {{ item.placa | uppercase }}</td>
+                <td>{{item.tipoVehiculo}}</td>
+                <td>{{item.cilindraje}}</td>
+                <td>{{item.fechaIngreso}}</td>
+                <td>{{item.fechaSalida}}</td>
+                <td>{{item.total}}</td>
+                <td>
+                  <button (click)="salirParqueadero(item.placa)">Salir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <button type="button" id="btnRefrescar" (click)="listarParqueadero()">Refrescar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<pre>{{parqueaderoDatos|json}}</pre>
