@@ -29,7 +29,7 @@ export class CrearComponent implements OnInit {
         cilindraje: null
       };
     }, err => {
-      this.toast.error(err, err.error.message);
+      this.toast.error(err.error.message, 'Error');
     });
   }
 }

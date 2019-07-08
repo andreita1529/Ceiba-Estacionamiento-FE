@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  URL: 'http://localhost:8081/parqueadero'
-  //URL: '/parqueadero'
+  apiUrl: '/parqueadero'
 };
 
 /*

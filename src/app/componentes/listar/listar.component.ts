@@ -19,7 +19,7 @@ export class ListarComponent implements OnInit {
     this.servicioParqueadero.listar().subscribe((res) => {
       this.respuesta = res;
     }, err => {
-      this.toast.error(err, err.error.message);
+      this.toast.error(err.error.message, 'Error');
     });
   }
 
@@ -27,7 +27,7 @@ export class ListarComponent implements OnInit {
     this.servicioParqueadero.salir(placa).subscribe((res) => {
       this.listarParqueadero();
     }, err => {
-      this.toast.error(err, err.error.message);
+      this.toast.error(err.error.message, 'Error');
     });
   }
 }

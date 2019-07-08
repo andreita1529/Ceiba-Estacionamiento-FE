@@ -10,14 +10,14 @@ export class ServicioParqueaderoService {
   constructor(private http: HttpClient) { }
 
   crear(data: any) {
-    return this.http.post(environment.URL, data);
+    return this.http.post(environment.apiUrl, data);
   }
 
   listar() {
-    return this.http.get(environment.URL);
+    return this.http.get(environment.apiUrl);
   }
 
   salir(placa: string) {
-    return this.http.put(environment.URL + '/' + placa, null);
+    return this.http.put(environment.apiUrl + '/' + placa, null);
   }
 }

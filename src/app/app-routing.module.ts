@@ -5,12 +5,12 @@ import { CrearComponent } from './componentes/crear/crear.component';
 
 const routes: Routes = [
   {
-    path: 'parqueadero',
+    path: 'inicio',
     component: CrearComponent
   },
   {
     path: '**',
-    redirectTo: 'parqueadero'
+    redirectTo: 'inicio'
   }
 ];
 
