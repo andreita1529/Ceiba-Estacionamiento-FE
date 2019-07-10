@@ -11,9 +11,7 @@ export class ListarComponent implements OnInit {
   public respuesta;
   constructor(private servicioParqueadero: ServicioParqueaderoService, private toast: ToastrService) { }
 
-  ngOnInit() {
-    this.listarParqueadero();
-  }
+  ngOnInit() { }
 
   listarParqueadero() {
     this.servicioParqueadero.listar().subscribe((res) => {
